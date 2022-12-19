@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     container:
       image: ros:noetic
     steps:
@@ -17,6 +17,9 @@ jobs:
         with:
           patterns: |
             ocs2_msgs ocs2_thirdparty ocs2_core ocs2_oc ocs2_mpc ocs2_ddp ocs2_sqp ocs2_test_tools/ocs2_qp_solver ocs2_robotic_tools blasfeo_catkin hpipm_catkin 
+      - uses: ros-tooling/setup-ros@v0.4
+        with:
+          required-ros-distributions: noetic
       - name: Add temp rosdep index
         run: |
           echo "yaml file://`pwd`/rosdep.yaml" | sudo tee /etc/ros/rosdep/sources.list.d/ocs2.list
