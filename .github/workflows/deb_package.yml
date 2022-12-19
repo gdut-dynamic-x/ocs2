@@ -10,6 +10,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container:
+      image: ubuntu:focal
     steps:
       - uses: snow-actions/sparse-checkout@v1.1.0
         with:
