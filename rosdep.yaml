@@ -1,0 +1,43 @@
+ocs2:
+  ubuntu: [ros-noetic-ocs2]
+ocs2_core:
+  ubuntu: [ros-noetic-ocs2-core]
+ocs2_ddp:
+  ubuntu: [ros-noetic-ocs2-ddp]
+ocs2_doc:
+  ubuntu: [ros-noetic-ocs2-doc]
+ocs2_frank_wolfe:
+  ubuntu: [ros-noetic-ocs2-frank-wolfe]
+ocs2_mpc:
+  ubuntu: [ros-noetic-ocs2-mpc]
+ocs2_msgs:
+  ubuntu: [ros-noetic-ocs2-msgs]
+ocs2_oc:
+  ubuntu: [ros-noetic-ocs2-oc]
+ocs2_ocs2:
+  ubuntu: [ros-noetic-ocs2-ocs2]
+ocs2_pinocchio:
+  ubuntu: [ros-noetic-ocs2-pinocchio]
+ocs2_python_interface:
+  ubuntu: [ros-noetic-ocs2-python-interface]
+ocs2_raisim:
+  ubuntu: [ros-noetic-ocs2-raisim]
+ocs2_robotic_examples:
+  ubuntu: [ros-noetic-ocs2-robotic-examples]
+ocs2_robotic_tools:
+  ubuntu: [ros-noetic-ocs2-robotic-tools]
+ocs2_ros_interface:
+  ubuntu: [ros-noetic-ocs2-ros-interface]
+ocs2_sqp:
+  ubuntu: [ros-noetic-ocs2-sqp]
+ocs2_qp_solver:
+  ubuntu: [ros-noetic-ocs2-qp-solver]
+ocs2_thirdparty:
+  ubuntu: [ros-noetic-ocs2-thirdparty]
+cmake_clang_tools:
+  #it's not really build dependency, but bloom-generate needs it's rosdep index to generate the meta of the package.
+  ubuntu: [cmake-clang-tools]
+blasfeo_catkin:
+  ubuntu: [blasfeo-catkin]
+hpipm_catkin:
+  ubuntu: [hpipm-catkin]
