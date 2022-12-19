@@ -13,13 +13,13 @@ jobs:
     container:
       image: ubuntu:focal
     steps:
+      - name: install git
+        run: |
+          sudo apt-get update && sudo apt-get install -y git
       - uses: snow-actions/sparse-checkout@v1.1.0
         with:
           patterns: |
             ocs2_msgs ocs2_thirdparty ocs2_core ocs2_oc ocs2_mpc ocs2_ddp ocs2_sqp ocs2_test_tools/ocs2_qp_solver ocs2_robotic_tools blasfeo_catkin hpipm_catkin 
-      - name: install git
-        run: |
-          sudo apt-get update && sudo apt-get install -y git
       - uses: ros-tooling/setup-ros@v0.4
         with:
           required-ros-distributions: noetic
