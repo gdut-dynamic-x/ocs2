@@ -10,8 +10,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-20.04
-    container:
-      image: ros:noetic
     steps:
       - uses: snow-actions/sparse-checkout@v1.1.0
         with:
