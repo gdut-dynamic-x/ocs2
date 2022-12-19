@@ -16,7 +16,7 @@ jobs:
           patterns: |
             ocs2_msgs ocs2_thirdparty ocs2_core ocs2_oc ocs2_mpc ocs2_ddp ocs2_sqp ocs2_test_tools/ocs2_qp_solver ocs2_robotic_tools blasfeo_catkin hpipm_catkin 
             
-      - uses: ros-tooling/setup-ros@v0.2
+      - uses: ros-tooling/setup-ros@v0.4
         with:
           required-ros-distributions: noetic
       - name: Add temp rosdep index
