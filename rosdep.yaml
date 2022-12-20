@@ -16,12 +16,12 @@ ocs2_oc:
   ubuntu: [ros-noetic-ocs2-oc]
 ocs2_ocs2:
   ubuntu: [ros-noetic-ocs2-ocs2]
+ocs2_perceptive:
+  ubuntu: [ros-noetic-ocs2-perceptive]
 ocs2_pinocchio:
   ubuntu: [ros-noetic-ocs2-pinocchio]
 ocs2_python_interface:
   ubuntu: [ros-noetic-ocs2-python-interface]
-ocs2_raisim:
-  ubuntu: [ros-noetic-ocs2-raisim]
 ocs2_robotic_examples:
   ubuntu: [ros-noetic-ocs2-robotic-examples]
 ocs2_robotic_tools:
