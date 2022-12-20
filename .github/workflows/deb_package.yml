@@ -19,7 +19,7 @@ jobs:
           required-ros-distributions: noetic
       - name: Add temp rosdep index
         run: |
-          echo "yaml file://`pwd`/rosdep.yaml" | sudo tee /etc/ros/rosdep/sources.list.d/ocs2.list
+          echo "yaml file://`pwd`/src/ocs2/rosdep.yaml" | sudo tee /etc/ros/rosdep/sources.list.d/ocs2.list
           sudo rosdep update
       - name: Checkout dependencies
         run: |
