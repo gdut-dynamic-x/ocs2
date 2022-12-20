@@ -14,7 +14,7 @@ jobs:
       - name: System deps
         run: |
           sudo apt-get update
-          sudo apt-get install -y git ninja-build liburdfdom-dev liboctomap-dev libassimp-dev checkinstall
+          sudo apt-get install -y git ninja-build liburdfdom-dev liboctomap-dev libassimp-dev
       - uses: actions/checkout@v2
         with: 
           path: src/ocs2 
@@ -30,14 +30,9 @@ jobs:
           git clone --recurse-submodules https://github.com/leggedrobotics/pinocchio.git src/pinocchio
           git clone --recurse-submodules https://github.com/leggedrobotics/hpp-fcl.git src/hpp-fcl
           git clone https://github.com/leggedrobotics/ocs2_robotic_assets.git src/ocs2_robotic_assets 
-      - name: Install RaiSim
+      - name: Remove raiSim
         run: |
-          git clone --depth 1 https://github.com/raisimTech/raisimLib.git -b v1.1.01 src/raisim_tech
-          cd src/raisim_tech
-          mkdir build
-          cd build
-          cmake .. -DPYTHON_EXECUTABLE=$(python3 -c "import sys; print(sys.executable)")
-          make -j4 && checkinstall
+          rm -rf src/ocs2_raisim
       - name: Package deb
         uses: gdut-dynamic-x/ros-build-deb-action@v1
         with:
