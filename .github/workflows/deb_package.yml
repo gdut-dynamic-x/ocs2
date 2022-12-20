@@ -11,6 +11,10 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     steps:
+      - name: System deps
+        run: |
+          apt-get update
+          apt-get install -y git ninja-build liburdfdom-dev liboctomap-dev libassimp-dev checkinstall
       - uses: actions/checkout@v2
         with: 
           path: src/ocs2 
