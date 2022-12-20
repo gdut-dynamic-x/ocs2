@@ -13,8 +13,8 @@ jobs:
     steps:
       - name: System deps
         run: |
-          apt-get update
-          apt-get install -y git ninja-build liburdfdom-dev liboctomap-dev libassimp-dev checkinstall
+          sudo apt-get update
+          sudo apt-get install -y git ninja-build liburdfdom-dev liboctomap-dev libassimp-dev checkinstall
       - uses: actions/checkout@v2
         with: 
           path: src/ocs2 
@@ -24,7 +24,7 @@ jobs:
       - name: Add temp rosdep index
         run: |
           echo "yaml file://`pwd`/src/ocs2/rosdep.yaml" | sudo tee /etc/ros/rosdep/sources.list.d/ocs2.list
-          sudo rosdep update
+          rosdep update
       - name: Checkout dependencies
         run: |
           git clone --recurse-submodules https://github.com/leggedrobotics/pinocchio.git src/pinocchio
